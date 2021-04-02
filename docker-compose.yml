@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: using-db-app
+    profiles: ["dev"]
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www/html/
+      - ./config/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    environment:
+      DB_CONNECTION: mysql
+      DB_HOST: using-db-database
+      DB_USERNAME: root
+      DB_PASSWORD: laravel
+      DB_DATABASE: school
+
+  mysql:
+    image: mysql:8.0
+    container_name: using-db-database
+    profiles: ["database", "dev"]
+    ports:
+      - 3309:3306
+    volumes:
+      - using-db-database:/var/lib/mysql
+    environment:
+      MYSQL_USER: CANELA
+      MYSQL_PASSWORD: canela
+      MYSQL_ROOT_PASSWORD: laravel
+      MYSQL_DATABASE: db_using_db
+
+volumes:
+  using-db-database:
