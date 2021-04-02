@@ -20,11 +20,19 @@ Esse e outros motivos causaram o vemos quando professores vão lidar com tecnolo
 -   PHP >= 8.0
 -   Composer >= 2.0.7
 
+-   Mysql >= 8.0.23
+
+ou
+
+-   Docker >= 20.10.5
+-   docker-compose >= 1.28.3
+
 ## Tecnologias usadas
 
 -   PHP
 -   Laravel
 -   Composer
+-   Docker
 
 ## Inicialização
 
@@ -34,7 +42,34 @@ Esse e outros motivos causaram o vemos quando professores vão lidar com tecnolo
 composer install
 ```
 
+### Configuração
+
+Copie o arquivo `.env.example` e nomei `.env` e mude as seguintes informações caso use mysql, configure os seguintes campos de acordo com o seu banco:
+
+```
+DB_CONNECTION=
+DB_HOST=
+DB_PORT=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+```
+
+Caso vá usar Docker é só seguir adiante que a própria configuração já automática.
+
 ### Inicialização
+
+#### Banco com Docker
+
+Na raiz do projeto:
+
+```
+docker-compose --profile database up
+```
+
+#### Projeto Laravel
+
+Na raiz do projeto:
 
 ```
 php artisan serve
