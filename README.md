@@ -27,16 +27,42 @@ ou
 -   Docker >= 20.10.5
 -   docker-compose >= 1.28.3
 
+### Requisitos opcionais
+
+-   Git >= 2.25.1
+
 ## Tecnologias usadas
 
--   PHP
--   Laravel
--   Composer
--   Docker
+-   PHP == 8.0
+-   Laravel == 8.12
+-   Composer == 2.0.7
+-   Docker == 20.10.5
+-   Docker compose == 1.28.3
+-   Git == 2.25.1
 
 ## Inicialização
 
-### Instalação
+### Trazendo o projeto pra máquina
+
+### Git
+
+Traga o projeto pra máquina:
+
+```
+git clone https://github.com/caneladeouro/help-students-and-teachers.git
+```
+
+Entre dentro do projeto (no caso do linux, mas também pode ser usado em outras plataformas):
+
+```
+cd help-students-and-teachers
+```
+
+### Arquivo compactado
+
+Clique no botão verde acima e depois em `Download zip`
+
+### Instalação das dependencias
 
 ```
 composer install
@@ -55,7 +81,7 @@ DB_USERNAME=
 DB_PASSWORD=
 ```
 
-Caso vá usar Docker é só seguir adiante que a própria configuração já automática.
+No caso do uso do Docker é só seguir adiante que a própria configuração já automática.
 
 ### Inicialização
 
