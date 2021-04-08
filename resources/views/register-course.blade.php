@@ -15,7 +15,7 @@
 
             <div class="col-md-6">
                 <label for="validationEndTime" class="form-label">Period</label>
-                <select name="email" class="form-select" aria-label="Default select example" required>
+                <select name="period" class="form-select" aria-label="Default select example" required>
                     <option selected>Open the period</option>
                     <option value="Morning">Morning</option>
                     <option value="Evening">Evening</option>
@@ -25,12 +25,12 @@
 
             <div class="col-md-6">
                 <label for="validationStartTime" class="form-label">Start time</label>
-                <input type="text" name="age" class="form-control" id="validationStartTime" placeholder="xx/xx/xxxx" required>
+                <input type="date" name="start_course" class="form-control" id="validationStartTime" placeholder="xx/xx/xxxx" required>
             </div>
 
             <div class="col-md-6">
                 <label for="validationEndTime" class="form-label">End time</label>
-                <input type="text" name="email" class="form-control" id="validationEndTime" placeholder="xx/xx/xxxx" required>
+                <input type="date" name="end_course" class="form-control" id="validationEndTime" placeholder="xx/xx/xxxx" required>
             </div>
 
             <div class="col-12">
