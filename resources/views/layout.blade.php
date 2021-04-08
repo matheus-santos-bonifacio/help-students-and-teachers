@@ -21,6 +21,7 @@
                 <div class="bg-dark p-4">
                     <a href="/students" class="nav-link">Students</a>
                     <a href="/teachers" class="nav-link">Teachers</a>
+                    <a href="/courses" class="nav-link">Courses</a>
                 </div>
             </div>
 
