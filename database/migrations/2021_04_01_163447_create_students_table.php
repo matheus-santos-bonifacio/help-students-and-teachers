@@ -15,9 +15,10 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id('id_student')->autoIncrement();
-            $table->string('name')->nullable(false);
-            $table->string('age')->nullable(false);
-            $table->string('email')->nullable(false);
+            $table->string('name', 50)->nullable(false);
+            $table->integer('age')->nullable(false);
+            $table->string('email', 50)->nullable(false);
+            $table->char('password', 64)->nullable(false);
             $table->timestamps();
         });
     }
