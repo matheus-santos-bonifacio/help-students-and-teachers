@@ -15,6 +15,7 @@
 
     <div class="container">
         <!-- Header Navbar -->
+        @section('navbar')
         <section>
             <!-- Navbar content -->
             <div class="collapse" id="navbarToggleExternalContent">
@@ -35,6 +36,7 @@
                 </div>
             </nav>
         </section>
+        @show
 
         <!-- Content -->
         @yield('content')
