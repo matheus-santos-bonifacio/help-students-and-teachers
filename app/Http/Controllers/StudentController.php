@@ -51,14 +51,26 @@ class StudentController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the all students.
      *
      * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function show(Student $student)
+    public function showAll(Student $student)
     {
         return view('show-students', ["data" => Student::all()]);
+    }
+
+    /**
+     * Display the specified student.
+     *
+     * @param int $id student id
+     * @param  \App\Models\Student  $student
+     * @return \Illuminate\Http\Response
+     */
+    public function show(int $id, Student $student)
+    {
+        return view('show-student', ["data" => Student::where(['id_student' => $id])->get()->first()]);
     }
 
     /**
