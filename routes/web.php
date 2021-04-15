@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\SchoolController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,7 @@ Route::post('/login-teacher', [StudentController::class, 'login']);
 Route::get('/courses', [CourseController::class, 'show']);
 Route::get('/register-course', [CourseController::class, 'create']);
 Route::post('/register-course', [CourseController::class, 'store']);
+
+// School
+Route::get('/register-shool', [SchoolController::class, 'create']);
+Route::get('/login-school', [SchoolController::class, 'login']);
