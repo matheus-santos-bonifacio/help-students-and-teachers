@@ -25,11 +25,13 @@ Route::get('/students', [StudentController::class, 'showAll']);
 Route::get('/student/{id}', [StudentController::class, 'show']);
 Route::get('/register-student', [StudentController::class, 'create']);
 Route::post('/register-student', [StudentController::class, 'store']);
+Route::post('/login-student', [StudentController::class, 'login']);
 
 // Teacher
 Route::get('/teachers', [TeacherController::class, 'show']);
 Route::get('/register-teacher', [TeacherController::class, 'create']);
 Route::post('/register-teacher', [TeacherController::class, 'store']);
+Route::post('/login-teacher', [StudentController::class, 'login']);
 
 // Course
 Route::get('/courses', [CourseController::class, 'show']);
