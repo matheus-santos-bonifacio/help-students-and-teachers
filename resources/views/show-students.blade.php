@@ -13,9 +13,10 @@
             <div class="card-body">
                 <h5 class="card-title">{{ $value->name }}</h5>
                 <p class="card-text">{{ $value->email }}</p>
-                <a href="#" class="btn btn-primary">See more</a>
+                <a href="/student/{{ $value->id_student }}" class="btn btn-primary">See more</a>
             </div>
         </div>
+
         @endforeach
     </div>
 </section>
