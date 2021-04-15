@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,8 @@ Route::get('/', function () {
 });
 
 // Student
-Route::get('/students', [StudentController::class, 'show']);
+Route::get('/students', [StudentController::class, 'showAll']);
+Route::get('/student/{id}', [StudentController::class, 'show']);
 Route::get('/register-student', [StudentController::class, 'create']);
 Route::post('/register-student', [StudentController::class, 'store']);
 
@@ -28,3 +30,8 @@ Route::post('/register-student', [StudentController::class, 'store']);
 Route::get('/teachers', [TeacherController::class, 'show']);
 Route::get('/register-teacher', [TeacherController::class, 'create']);
 Route::post('/register-teacher', [TeacherController::class, 'store']);
+
+// Course
+Route::get('/courses', [CourseController::class, 'show']);
+Route::get('/register-course', [CourseController::class, 'create']);
+Route::post('/register-course', [CourseController::class, 'store']);
